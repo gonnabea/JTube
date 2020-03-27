@@ -10,14 +10,14 @@ passport.use(User.createStrategy());
 passport.use(new GithubStrategy({
     clientID: process.env.GH_ID,
     clientSecret: process.env.GH_SECRET,
-    callbackURL: `http://localhost:5000${routes.githubCallback}`
+    callbackURL: `https://nameless-retreat-75573.herokuapp.com${routes.githubCallback}`
 }, githubLoginCallback
 ));
 
 passport.use(new FacebookStrategy({
     clientID: process.env.FB_ID,
     clientSecret: process.env.FB_SECRET,
-    callbackURL: `https://0bf61455.ngrok.io${
+    callbackURL: `https://nameless-retreat-75573.herokuapp.com/${
         routes.facebookCallback
         }`,
     profileFields: ['id', 'displayName', 'email'],
