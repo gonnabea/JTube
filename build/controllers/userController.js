@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.postChangePassword = exports.getChangePassword = exports.postEditProfile = exports.getEditProfile = exports.userDetail = exports.getMe = exports.logoutSelect = exports.logout = exports.githubLogin = exports.postLogin = exports.getLogin = exports.postFacebookLogin = exports.facebookLoginCallback = exports.facebookLogin = exports.postGithubLogin = exports.githubLoginCallback = exports.postJoin = exports.getJoin = void 0;
 
+require("@babel/polyfill");
+
 var _passport = _interopRequireDefault(require("passport"));
 
 var _routes = _interopRequireDefault(require("../routes"));

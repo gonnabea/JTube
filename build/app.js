@@ -23,6 +23,8 @@ var _expressSession = _interopRequireDefault(require("express-session"));
 
 var _connectMongo = _interopRequireDefault(require("connect-mongo"));
 
+var _path = _interopRequireDefault(require("path"));
+
 var _middlewares = require("./middlewares");
 
 var _routes = _interopRequireDefault(require("./routes"));
@@ -43,9 +45,10 @@ var app = (0, _express["default"])();
 var CokieStore = (0, _connectMongo["default"])(_expressSession["default"]);
 app.use((0, _helmet["default"])());
 app.set("view engine", "pug");
+app.set("views", _path["default"].join(__dirname, "views"));
 app.use("/uploads", _express["default"]["static"]("uploads")); // ★
 
-app.use("/static", _express["default"]["static"]("static")); // ★
+app.use("/static", _express["default"]["static"](_path["default"].join(__dirname, "static"))); // ★
 
 app.use((0, _cookieParser["default"])());
 app.use(_bodyParser["default"].json({
