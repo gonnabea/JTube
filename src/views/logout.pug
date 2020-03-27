@@ -1,0 +1,11 @@
+doctype html
+html
+    head
+        title #{pageTitle} | #{siteName}
+    body
+        p
+            h1 Are you sure you wanna logout?
+        a(href=routes.logoutSelect)
+            h5 Yes
+        a(href=routes.home)
+            h5 No
