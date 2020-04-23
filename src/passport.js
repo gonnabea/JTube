@@ -17,7 +17,7 @@ passport.use(new GithubStrategy({
 passport.use(new FacebookStrategy({
     clientID: process.env.FB_ID,
     clientSecret: process.env.FB_SECRET,
-    callbackURL: `https://nameless-retreat-75573.herokuapp.com/${
+    callbackURL: `https://nameless-retreat-75573.herokuapp.com${
         routes.facebookCallback
         }`,
     profileFields: ['id', 'displayName', 'email'],
